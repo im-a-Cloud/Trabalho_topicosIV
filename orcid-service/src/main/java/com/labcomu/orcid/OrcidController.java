@@ -21,7 +21,8 @@ public class OrcidController {
     public boolean isActive() {
         return service.isActive();
     }
-
+    //missão 2
+    @Throw(exception=RuntimeException.class, threshold=0.5)
     @GetMapping("researcher/{orcid}")
     public Researcher getResearcher(@NotNull @PathVariable String orcid) {
         return service.getResearcher(orcid);
