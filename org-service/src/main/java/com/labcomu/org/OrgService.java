@@ -43,7 +43,7 @@ public class OrgService {
         return organization.map(resourceOrganizationMapper::map); 
     }
 
-    @Delay(value=5, threshold=0.9)
+    
     public Optional<ResourceOrganization> getOrganization(@NotNull final String url, RuntimeException re) {
         Optional<Organization> organization = organizationRepository.findByUrl(url);
 
